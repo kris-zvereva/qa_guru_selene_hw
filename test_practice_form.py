@@ -1,7 +1,7 @@
 import os
 from selene import browser, have, command
 
-def test_submit_practice_form():
+def test_submit_practice_form(set_browser):
     browser.open('/automation-practice-form')
 
     # Personal information
@@ -27,7 +27,7 @@ def test_submit_practice_form():
 
     # Address
     browser.element('#currentAddress').type('test address')
-    browser.element('#state').click()
+    browser.element('#state').perform(command.js.scroll_into_view).click()
     browser.element('#react-select-3-input').type('Haryana').press_enter()
     browser.element('#city').click()
     browser.element('#react-select-4-input').type('Karnal').press_enter()
