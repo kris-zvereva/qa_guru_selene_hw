@@ -1,4 +1,4 @@
-from mid_level_step_objects_done.model.pages.registration_page import RegistrationPage
+from mid_level_step_objects.model.pages.registration_page import RegistrationPage
 
 
 def test_submit_practice_form(set_browser):
