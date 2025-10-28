@@ -5,8 +5,9 @@ from selene import browser, have, command
 from high_level_step_objects.data.user import User, Gender, Hobby
 
 
-REGISTRATION_PAGE_URL = 'https://demoqa.com/automation-practice-form'
-IMAGE_PATH = 'resources/test_image.png'
+REGISTRATION_PAGE_URL = '/automation-practice-form'
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGE_PATH = os.path.join(CURRENT_DIR, '..', '..', 'resources', 'test_image.png')
 
 class RegistrationPage:
     def __init__(self):
